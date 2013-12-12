@@ -1,0 +1,14 @@
+{
+    "name": "Phpansible/Phpansible",
+    "description": "Ansible's playbooks generator for PHP projects",
+    "autoload": {
+            "psr-0": {"": "src/"}
+    },
+    "require": {
+        "php": ">=5.4.0",
+    },
+    "require-dev": {
+        "satooshi/php-coveralls": "dev-master",
+        "phpunit/phpunit": "3.7.*"
+    }
+}

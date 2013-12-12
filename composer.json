@@ -1,6 +1,7 @@
 {
     "name": "Phpansible/Phpansible",
     "description": "Ansible's playbooks generator for PHP projects",
+    "homepage": "http://phpansible.com",
     "autoload": {
             "psr-0": {"": "src/"}
     },

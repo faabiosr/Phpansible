@@ -1,0 +1,13 @@
+---
+- name: Nginx - Install Webserver
+  apt: pkg=nginx state=installed
+
+- name: Nginx - Create host folder
+  file: path={{ document_root  }} state=directory
+
+- name: Nginx - Configure Host
+  template: src=files/nginx.conf dest={{ nginx_folder }}/sites-available/{{ server_name }}
+
+- name: Nginx - Applying configuration
+  command: ln -s {{ nginx_folder }}/sites-available/{{ server_name }} {{ nginx_folder }}/sites-enabled/{{ server_name }}
+  notify: Nginx - Restart

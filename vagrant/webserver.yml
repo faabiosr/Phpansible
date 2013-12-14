@@ -1,12 +1,16 @@
 ---
-- hosts: all
-  sudo : True
+- name: Install Phpansible development environment 
+  hosts: all
+  sudo: True
+  vars: 
+    root_folder: "/var/www"
+    server_name: "phpansible.dev"
+    document_root: "{{ root_folder }}/{{ server_name }}"
+    nginx_folder: "/etc/nginx"
   tasks:
-    - name: Update Packages List
-      apt: update_cache=yes
-    - name: Install common packages
-      apt: pkg=$item state=latest
-      with_items:
-        - curl
-        - vim
-        - git
+    - include: tasks/common.yml
+    - include: tasks/nginx.yml
+    - include: tasks/php.yml
+  handlers:
+    - include: handlers/nginx.yml
+    - include: handlers/php.yml

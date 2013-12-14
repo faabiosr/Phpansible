@@ -1,0 +1,12 @@
+---
+- hosts: all
+  sudo : True
+  tasks:
+    - name: Update Packages List
+      apt: update_cache=yes
+    - name: Install common packages
+      apt: pkg=$item state=latest
+      with_items:
+        - curl
+        - vim
+        - git

@@ -8,5 +8,5 @@
 - name: PHP - Disable default configuration
   command: mv /etc/php5/fpm/pool.d/www.conf /etc/php5/fpm/pool.d/www.disabled creates=/etc/php5/fpm/pool.d/www.disabled
 - name: PHP - Configure FPM
-  template: src=files/php5-fpm.conf dest=/etc/php5/fpm/pool.d/{{ server_name }}
+  template: src=files/php5-fpm.conf dest=/etc/php5/fpm/pool.d/phpansible.conf
   notify: PHP - Restart FPM

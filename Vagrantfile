@@ -8,7 +8,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.ssh.forward_agent = true
 
-  config.vm.synced_folder "./", "/var/www", id: "vagrant-root", :nfs => false
+  config.vm.synced_folder "./public", "/var/www/phpansible.dev", id: "vagrant-root", :nfs => false
 
   config.vm.provider :virtualbox do |vb|
     vb.customize [

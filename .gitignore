@@ -1,3 +1,6 @@
+build
+composer.lock
 .vagrant
 vagrant_ansible_inventory_default
 *.swp
+vendor

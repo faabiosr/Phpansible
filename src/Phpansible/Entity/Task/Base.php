@@ -25,6 +25,11 @@ abstract class Base
         $this->name = $name;
     }
 
+    public function getName()
+    {
+        return "- name: {$this->name}";
+    }
+
     /**
      * @abstract
      * @param string $action

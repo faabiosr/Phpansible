@@ -3,10 +3,12 @@
     "description": "Ansible's playbooks generator for PHP projects",
     "homepage": "http://phpansible.com",
     "autoload": {
-            "psr-0": {"": "src/"}
+         "psr-0": {
+            "Phpansible\\Phpansible": "src/"
+         }
     },
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=5.4.0"
     },
     "require-dev": {
         "satooshi/php-coveralls": "dev-master",

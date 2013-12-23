@@ -8,7 +8,10 @@
          }
     },
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=5.4.0",
+        "respect/rest": "dev-master",
+        "respect/config": "dev-master",
+        "twig/twig": "1.15.*@dev"
     },
     "require-dev": {
         "satooshi/php-coveralls": "dev-master",

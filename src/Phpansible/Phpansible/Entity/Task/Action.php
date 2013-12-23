@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpansible\Entity\Task;
+namespace Phpansible\Phpansible\Entity\Task;
 
 class Action extends Base {
     public function setAction($action)

@@ -7,7 +7,7 @@
  * @author Phpansible Team
  */
 
-namespace Phpansible\Entity\Task;
+namespace Phpansible\Phpansible\Entity\Task;
 
 abstract class Base
 {

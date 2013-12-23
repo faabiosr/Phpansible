@@ -1,6 +1,6 @@
 <?php
 
-use Phpansible\Entity\Task\Action;
+use Phpansible\Phpansible\Entity\Task\Action;
 
 class ActionTest extends PHPUnit_Framework_TestCase
 {

@@ -4,3 +4,4 @@ composer.lock
 vagrant_ansible_inventory_default
 *.swp
 vendor
+.DS_Store

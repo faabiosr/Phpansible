@@ -1,5 +1,7 @@
 # Phpansible
 
+[![Build Status](https://travis-ci.org/Phpansible/Phpansible.png?branch=master)](https://travis-ci.org/Phpansible/Phpansible)
+
 Phpansible provides an easy to use interface that helps you generate Ansible
 Playbooks for PHP based projects.
 

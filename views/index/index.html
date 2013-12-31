@@ -11,64 +11,49 @@
     <link rel="stylesheet" type="text/css" class="ui" href="/assets/css/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/semantic.css">
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-    <script>
-    // (function () {
-    // var
-    //   eventSupport = ('querySelector' in document && 'addEventListener' in window)
-    //   jsonSupport  = (typeof JSON !== 'undefined'),
-    //   jQuery       = (eventSupport && jsonSupport)
-    //     ? 'http://semantic-ui.com/javascript/library/jquery.min.js'
-    //     : 'http://semantic-ui.com/javascript/library/jquery.legacy.min.js'
-    // ;
-    // document.write('<script src="' + jQuery + '"><\/script>');
-    // }());
-    </script>
+    <script src="/assets/js/jquery-2.0.3.min.js"></script>
 
     <!-- <script src="http://semantic-ui.com/javascript/library/history.js"></script>
-    <script src="http://semantic-ui.com/javascript/library/easing.js"></script>
-    <script src="http://semantic-ui.com/javascript/library/ace/ace.js"></script>
-    <script src="http://semantic-ui.com/javascript/library/tablesort.js"></script>
-    <script src="http://semantic-ui.com/javascript/library/waypoints.js"></script>
+    <script src="http://semantic-ui.com/javascript/library/easing.js"></script>-->
+    <script src="/assets/js/waypoints.min.js"></script>
+    <script src="/assets/js/waypoints-sticky.min.js"></script>
     <script src="/assets/js/semantic.min.js"></script>
-    <script src="http://semantic-ui.com/javascript/semantic.js"></script> -->
+    <script src="/assets/js/main.js"></script>
 </head>
 <body id="example" class="form">
     <div class="ui fixed transparent inverted main menu">
         <div class="container">
             <div class="title item">Phpansible</div>
             <div class="right menu">
-                <a class="popup icon github item" data-content="View project on Github" href="https://github.com/quirkyinc/semantic">
+                <a class="popup icon github item" data-content="View project on Github" href="https://github.com/Phpansible/Phpansible">
                     <i class="icon github"></i> Fork me
                 </a>
             </div>
         </div>
     </div>
-    <!-- <script src="http://semantic-ui.com/javascript/form.js"></script> -->
-    <div class="segment">
+
+    <header>
         <div class="container">
             <div class="introduction">
-                <h1 class="ui dividing header">Phpansible</h1>
+                <h1>Phpansible</h1>
                 <p>Phpansible provides an easy to use interface that helps you generate Ansible Playbooks for PHP based projects.</p>
             </div>
         </div>
-    </div>
+    </header>
 
     <div class="main container">
-        <div class="peek">
+        <aside class="peek">
             <div class="ui vertical pointing secondary menu">
                 <a class="active item">VM Details</a>
                 <a class="item">Server Details</a>
                 <a class="item">Webserver</a>
                 <a class="item">PHP</a>
                 <a class="item">Database</a>
-                <a class="item">Generate</a>
             </div>
-        </div>
+        </aside>
 
         <h2 class="ui dividing header">VM Details</h2>
-        <div class="example">
+        <section>
             <h3 class="ui header">Vagrant file:</h3>
             <p>Pulvinar etiam eu platea ac vel! Integer et, dis phasellus, sed lectus adipiscing nascetur dolor augue diam ultrices! Nascetur elit! Adipiscing. Habitasse integer ac, ultrices magnis proin proin risus facilisis dis parturient! Aenean est, et ut, pulvinar quis aenean, dignissim.</p>
             <div class="ui form segment">
@@ -125,10 +110,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <h2 class="ui dividing header">Server Details</h2>
-        <div class="example">
+        <section>
             <h3 class="ui header">Server packages:</h3>
             <p>Pulvinar etiam eu platea ac vel! Integer et, dis phasellus, sed lectus adipiscing nascetur dolor augue diam ultrices! Nascetur elit! Adipiscing. Habitasse integer ac, ultrices magnis proin proin risus facilisis dis parturient! Aenean est, et ut, pulvinar quis aenean, dignissim.</p>
             <div class="ui form segment">
@@ -137,14 +122,14 @@
                     <input type="text">
                 </div>
             </div>
-        </div>
+        </section>
 
         <h2 class="ui dividing header">Webserver</h2>
-        <div class="example">
+        <section>
             <h3 class="ui header">Webserver settings:</h3>
             <p>Pulvinar etiam eu platea ac vel! Integer et, dis phasellus, sed lectus adipiscing nascetur dolor augue diam ultrices! Nascetur elit! Adipiscing. Habitasse integer ac, ultrices magnis proin proin risus facilisis dis parturient! Aenean est, et ut, pulvinar quis aenean, dignissim.</p>
             <div class="ui pointing menu">
-              <a class="active item red">Apache</a>
+              <a class="active purple item">Apache</a>
             </div>
             <div class="ui form segment">
                 <div class="two fields">
@@ -183,10 +168,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <h2 class="ui dividing header">PHP</h2>
-        <div class="example">
+        <section>
             <h3 class="ui header">Settings:</h3>
             <p>Pulvinar etiam eu platea ac vel! Integer et, dis phasellus, sed lectus adipiscing nascetur dolor augue diam ultrices! Nascetur elit! Adipiscing. Habitasse integer ac, ultrices magnis proin proin risus facilisis dis parturient! Aenean est, et ut, pulvinar quis aenean, dignissim.</p>
             <div class="ui form segment">
@@ -194,16 +179,14 @@
                     <div class="field">
                         <label>Version:</label>
                         <div class="ui buttons">
-                            <div class="ui  purple button">5.5</div>
-                            <div class="ui  purple button">5.4</div>
-                            <div class="ui  purple button">5.3</div>
+                            <div class="ui black button">5.5</div>
+                            <div class="ui black button">5.4</div>
+                            <div class="ui black button">5.3</div>
                         </div>
                     </div>
                     <div class="field">
                         <label>Composer:</label>
-                        <div class="ui buttons">
-                            <div class="ui toogle  purple button">Install composer</div>
-                        </div>
+                        <div class="ui toggle black button">Disabled</div>
                     </div>
                     <div class="field">
                         <label>Timezone:</label>
@@ -230,14 +213,14 @@
                     <input type="text">
                 </div>
             </div>
-        </div>
+        </section>
 
         <h2 class="ui dividing header">Database</h2>
-        <div class="example">
+        <section>
             <h3 class="ui header">Database settings:</h3>
             <p>Pulvinar etiam eu platea ac vel! Integer et, dis phasellus, sed lectus adipiscing nascetur dolor augue diam ultrices! Nascetur elit! Adipiscing. Habitasse integer ac, ultrices magnis proin proin risus facilisis dis parturient! Aenean est, et ut, pulvinar quis aenean, dignissim.</p>
             <div class="ui pointing menu">
-              <a class="active black item">MySQL</a>
+              <a class="active purple item">MySQL</a>
             </div>
             <div class="ui form segment">
                 <div class="two fields">
@@ -252,17 +235,15 @@
                     </div>
                     <div class="field">
                         <label>PHPMyAdmin:</label>
-                        <div class="ui buttons">
-                            <div class="ui toogle black button">Install PHPMyAdmin</div>
-                        </div>
+                            <div class="ui toggle black button">Disabled</div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="example">
-            <div class="fluid ui button">Generate</div>
-        </div>
+        <section>
+            <div class="fluid ui purple button">Generate</div>
+        </section>
 
     </div>
 </body>

@@ -9,7 +9,7 @@
 
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" class="ui" href="/assets/css/semantic.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/semantic.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 
     <script src="/assets/js/jquery-2.0.3.min.js"></script>
 
@@ -52,199 +52,711 @@
             </div>
         </aside>
 
-        <h2 class="ui dividing header">VM Details</h2>
-        <section>
-            <h3 class="ui header">Vagrant file:</h3>
-            <p>Pulvinar etiam eu platea ac vel! Integer et, dis phasellus, sed lectus adipiscing nascetur dolor augue diam ultrices! Nascetur elit! Adipiscing. Habitasse integer ac, ultrices magnis proin proin risus facilisis dis parturient! Aenean est, et ut, pulvinar quis aenean, dignissim.</p>
-            <div class="ui form segment">
-                <div class="field">
-                    <label>VM Opeating System:</label>
-                    <div class="grouped inline fields">
-                        <div class="field">
-                            <div class="ui radio checkbox">
-                                <input type="radio" name="fruit" checked />
-                                <label>CentOS 6.4 x64</label>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <div class="ui radio checkbox">
-                                <input type="radio" name="fruit" />
-                                <label>Debian Wheezy 7.2 x64</label>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <div class="ui radio checkbox">
-                                <input type="radio" name="fruit" />
-                                <label>Ubuntu Precise 12.04 x64</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="field">
-                    <label>VM Name:</label>
-                    <div class="ui left labeled input">
-                        <input type="text">
-                        <div class="ui corner label">
-                            <i class="icon asterisk"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="two fields">
+        <form class="ui form" method="POST">
+            <h2 class="ui dividing header">VM Settings</h2>
+            <section>
+                <h3 class="ui header">Instructions:</h3>
+                <p>Pulvinar etiam eu platea ac vel! Integer et, dis phasellus, sed lectus adipiscing nascetur dolor augue diam ultrices! Nascetur elit! Adipiscing. Habitasse integer ac, ultrices magnis proin proin risus facilisis dis parturient! Aenean est, et ut, pulvinar quis aenean, dignissim.</p>
+                <div class="ui piled segment">
+                    <div class="ui top attached black label">Details</div>
                     <div class="field">
-                        <label>VM IP Address:</label>
-                        <div class="ui left labeled input">
-                            <input type="text">
-                            <div class="ui corner label">
-                                <i class="icon asterisk"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label>VM Memory</label>
-                        <div class="ui left labeled input">
-                            <input type="text">
-                            <div class="ui corner label">
-                                <i class="icon asterisk"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <h2 class="ui dividing header">Server Details</h2>
-        <section>
-            <h3 class="ui header">Server packages:</h3>
-            <p>Pulvinar etiam eu platea ac vel! Integer et, dis phasellus, sed lectus adipiscing nascetur dolor augue diam ultrices! Nascetur elit! Adipiscing. Habitasse integer ac, ultrices magnis proin proin risus facilisis dis parturient! Aenean est, et ut, pulvinar quis aenean, dignissim.</p>
-            <div class="ui form segment">
-                <div class="field">
-                    <label>Packages:</label>
-                    <input type="text">
-                </div>
-            </div>
-        </section>
-
-        <h2 class="ui dividing header">Webserver</h2>
-        <section>
-            <h3 class="ui header">Webserver settings:</h3>
-            <p>Pulvinar etiam eu platea ac vel! Integer et, dis phasellus, sed lectus adipiscing nascetur dolor augue diam ultrices! Nascetur elit! Adipiscing. Habitasse integer ac, ultrices magnis proin proin risus facilisis dis parturient! Aenean est, et ut, pulvinar quis aenean, dignissim.</p>
-            <div class="ui pointing menu">
-              <a class="active purple item">Apache</a>
-            </div>
-            <div class="ui form segment">
-                <div class="two fields">
-                    <div class="field">
-                        <label>Server Name:</label>
-                        <div class="ui left labeled input">
-                            <input type="text">
-                            <div class="ui corner label">
-                                <i class="icon asterisk"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label>Document Root:</label>
-                        <div class="ui left labeled input">
-                            <input type="text">
-                            <div class="ui corner label">
-                                <i class="icon asterisk"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="two fields">
-                    <div class="field">
-                        <label>Server Aliases:</label>
-                        <input type="text">
-                    </div>
-                    <div class="field">
-                        <label>Server Port:</label>
-                        <div class="ui left labeled input">
-                            <input type="text">
-                            <div class="ui corner label">
-                                <i class="icon asterisk"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <h2 class="ui dividing header">PHP</h2>
-        <section>
-            <h3 class="ui header">Settings:</h3>
-            <p>Pulvinar etiam eu platea ac vel! Integer et, dis phasellus, sed lectus adipiscing nascetur dolor augue diam ultrices! Nascetur elit! Adipiscing. Habitasse integer ac, ultrices magnis proin proin risus facilisis dis parturient! Aenean est, et ut, pulvinar quis aenean, dignissim.</p>
-            <div class="ui form segment">
-                <div class="three fields">
-                    <div class="field">
-                        <label>Version:</label>
-                        <div class="ui buttons">
-                            <div class="ui black button">5.5</div>
-                            <div class="ui black button">5.4</div>
-                            <div class="ui black button">5.3</div>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label>Composer:</label>
-                        <div class="ui toggle black button">Disabled</div>
-                    </div>
-                    <div class="field">
-                        <label>Timezone:</label>
-                            <div class="ui selection dropdown">
-                                <input type="hidden" name="gender">
-                                <div class="default text">Timezone</div>
-                                <i class="dropdown icon"></i>
-                                <div class="menu ui transition hidden">
-                                    <div class="item" data-value="male">America/Sao_Paulo</div>
+                        <label>Opeating System:</label>
+                        <div class="grouped inline fields">
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="os" value="centos_6.4_x64" checked />
+                                    <label>CentOS 6.4 x64</label>
                                 </div>
                             </div>
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="os" value="debian_7.2_x64" />
+                                    <label>Debian Wheezy 7.2 x64</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="os" value="ubuntu_12.04_x64" />
+                                    <label>Ubuntu Precise 12.04 x64</label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="field">
-                    <label>PHP Modules:</label>
-                    <input type="text">
-                </div>
-                <div class="field">
-                    <label>PEAR Modules:</label>
-                    <input type="text">
-                </div>
-                <div class="field">
-                    <label>PECL Modules:</label>
-                    <input type="text">
-                </div>
-            </div>
-        </section>
-
-        <h2 class="ui dividing header">Database</h2>
-        <section>
-            <h3 class="ui header">Database settings:</h3>
-            <p>Pulvinar etiam eu platea ac vel! Integer et, dis phasellus, sed lectus adipiscing nascetur dolor augue diam ultrices! Nascetur elit! Adipiscing. Habitasse integer ac, ultrices magnis proin proin risus facilisis dis parturient! Aenean est, et ut, pulvinar quis aenean, dignissim.</p>
-            <div class="ui pointing menu">
-              <a class="active purple item">MySQL</a>
-            </div>
-            <div class="ui form segment">
-                <div class="two fields">
                     <div class="field">
-                        <label>Root Password:</label>
+                        <label>Name:</label>
                         <div class="ui left labeled input">
-                            <input type="text">
+                            <input type="text" name="name" />
                             <div class="ui corner label">
                                 <i class="icon asterisk"></i>
                             </div>
                         </div>
                     </div>
+                    <div class="two fields">
+                        <div class="field">
+                            <label>IP Address:</label>
+                            <div class="ui left labeled input">
+                                <input type="text" name="ip_address" />
+                                <div class="ui corner label">
+                                    <i class="icon asterisk"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Memory</label>
+                            <div class="ui left labeled input">
+                                <input type="text" name="memory" />
+                                <div class="ui corner label">
+                                    <i class="icon asterisk"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="field">
-                        <label>PHPMyAdmin:</label>
-                            <div class="ui toggle black button">Disabled</div>
+                        <div class="ui segment">
+                            <div class="ui top attached black label">Fowarded Ports</div>
+                            <div class="ui segment port">
+                                <a class="ui right red corner label removePort">
+                                    <i class="remove icon"></i>
+                                </a>
+                                <div class="two fields">
+                                    <div class="field">
+                                        <label>Host Port:</label>
+                                        <input type="text" name="host_port[]" />
+                                    </div>
+                                    <div class="field">
+                                        <label>VM Port:</label>
+                                        <input type="text" name="vm_port[]" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <a class="ui fluid labeled green icon button">
+                                    <i class="add icon"></i> Add port pair
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui segment">
+                            <div class="ui top attached black label">Synced Folders</div>
+                            <div class="ui segment">
+                                <a class="ui right red corner label">
+                                    <i class="remove icon"></i>
+                                </a>
+                                <div class="three fields">
+                                    <div class="field">
+                                        <label>Folder Type:</label>
+                                        <div class="ui fluid selection dropdown">
+                                            <input type="hidden" name="folder_type[]" />
+                                            <div class="default text">Default</div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu ui transition hidden">
+                                                <div class="item active" data-value="default">Default</div>
+                                                <div class="item" data-value="nfs">NFS</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <label>Folder Source:</label>
+                                        <input type="text" name="folder_source[]" />
+                                    </div>
+                                    <div class="field">
+                                        <label>Folder Target:</label>
+                                        <input type="text" name="folder_target[]" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <a class="ui fluid labeled green icon button">
+                                    <i class="add icon"></i> Add shared folder
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section>
-            <div class="fluid ui purple button">Generate</div>
-        </section>
+            <h2 class="ui dividing header">Server Settings</h2>
+            <section>
+                <h3 class="ui header">Instructions:</h3>
+                <p>Pulvinar etiam eu platea ac vel! Integer et, dis phasellus, sed lectus adipiscing nascetur dolor augue diam ultrices! Nascetur elit! Adipiscing. Habitasse integer ac, ultrices magnis proin proin risus facilisis dis parturient! Aenean est, et ut, pulvinar quis aenean, dignissim.</p>
+                <div class="ui piled segment">
+                    <div class="ui top attached black label">Details</div>
+                    <div class="field">
+                        <label>Packages:</label>
+                        <input type="text" name="packages" />
+                    </div>
+                </div>
+            </section>
 
+            <h2 class="ui dividing header">Webserver - Apache</h2>
+            <section>
+                <h3 class="ui header">Instructions:</h3>
+                <p>Pulvinar etiam eu platea ac vel! Integer et, dis phasellus, sed lectus adipiscing nascetur dolor augue diam ultrices! Nascetur elit! Adipiscing. Habitasse integer ac, ultrices magnis proin proin risus facilisis dis parturient! Aenean est, et ut, pulvinar quis aenean, dignissim.</p>
+                <div class="ui piled segment">
+                    <div class="ui top attached black label">Details</div>
+                    <div class="field">
+                        <label>Modules:</label>
+                        <input type="text" name="webserver_modules" />
+                    </div>
+                    <div class="field">
+                        <div class="ui segment">
+                            <div class="ui top attached black label">Virtual Host</div>
+                            <div class="ui segment">
+                                <a class="ui right red corner label">
+                                    <i class="remove icon"></i>
+                                </a>
+                                <div class="two fields">
+                                    <div class="field">
+                                        <label>Server Name:</label>
+                                        <div class="ui left labeled input">
+                                            <input type="text" name="webserver_name" />
+                                            <div class="ui corner label">
+                                                <i class="icon asterisk"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <label>Document Root:</label>
+                                        <div class="ui left labeled input">
+                                            <input type="text" name="webserver_docroot" />
+                                            <div class="ui corner label">
+                                                <i class="icon asterisk"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="two fields">
+                                    <div class="field">
+                                        <label>Server Aliases:</label>
+                                        <input type="text" name="webserver_aliases" />
+                                    </div>
+                                    <div class="field">
+                                        <label>Server Port:</label>
+                                        <div class="ui left labeled input">
+                                            <input type="text" name="webserver_port" />
+                                            <div class="ui corner label">
+                                                <i class="icon asterisk"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="two fields">
+                                    <div class="field">
+                                        <label>Environment Variables:</label>
+                                        <input type="text" name="webser_envs" />
+                                    </div>
+                                    <div class="field">
+                                        <label>AllowOverride:</label>
+                                        <input type="text" name="webserver_allowoverride" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <a class="ui fluid labeled green icon button">
+                                    <i class="add icon"></i> Add virtual host
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <h2 class="ui dividing header">PHP</h2>
+            <section>
+                <h3 class="ui header">Instructions:</h3>
+                <p>Pulvinar etiam eu platea ac vel! Integer et, dis phasellus, sed lectus adipiscing nascetur dolor augue diam ultrices! Nascetur elit! Adipiscing. Habitasse integer ac, ultrices magnis proin proin risus facilisis dis parturient! Aenean est, et ut, pulvinar quis aenean, dignissim.</p>
+                <div class="ui piled segment">
+                    <div class="ui top attached black label">Details</div>
+                    <div class="three fields">
+                        <div class="field">
+                            <label>Version:</label>
+                            <div class="three fluid ui buttons">
+                                <input type="hidden" name="php_version" value="5.5" />
+                                <div class="ui green active button phpversion" data-value="5.5">5.5</div>
+                                <div class="ui black button phpversion" data-value="5.4">5.4</div>
+                                <div class="ui black button phpversion" data-value="5.3">5.3</div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Composer:</label>
+                            <input type="hidden" name="composer" value="0" />
+                            <div class="ui fluid toggle black button composer">Disabled</div>
+                        </div>
+                        <div class="field">
+                            <label>Timezone:</label>
+                                <div class="ui fluid selection dropdown">
+                                    <input type="hidden" name="php_timezone" />
+                                    <div class="default text">Timezone</div>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu ui transition hidden">
+                                        <div class="item" data-value="Africa/Abidjan">Africa/Abidjan</div>
+                                        <div class="item" data-value="Africa/Accra">Africa/Accra</div>
+                                        <div class="item" data-value="Africa/Addis_Ababa">Africa/Addis_Ababa</div>
+                                        <div class="item" data-value="Africa/Algiers">Africa/Algiers</div>
+                                        <div class="item" data-value="Africa/Asmara">Africa/Asmara</div>
+                                        <div class="item" data-value="Africa/Bamako">Africa/Bamako</div>
+                                        <div class="item" data-value="Africa/Bangui">Africa/Bangui</div>
+                                        <div class="item" data-value="Africa/Banjul">Africa/Banjul</div>
+                                        <div class="item" data-value="Africa/Bissau">Africa/Bissau</div>
+                                        <div class="item" data-value="Africa/Blantyre">Africa/Blantyre</div>
+                                        <div class="item" data-value="Africa/Brazzaville">Africa/Brazzaville</div>
+                                        <div class="item" data-value="Africa/Bujumbura">Africa/Bujumbura</div>
+                                        <div class="item" data-value="Africa/Cairo">Africa/Cairo</div>
+                                        <div class="item" data-value="Africa/Casablanca">Africa/Casablanca</div>
+                                        <div class="item" data-value="Africa/Ceuta">Africa/Ceuta</div>
+                                        <div class="item" data-value="Africa/Conakry">Africa/Conakry</div>
+                                        <div class="item" data-value="Africa/Dakar">Africa/Dakar</div>
+                                        <div class="item" data-value="Africa/Dar_es_Salaam">Africa/Dar_es_Salaam</div>
+                                        <div class="item" data-value="Africa/Djibouti">Africa/Djibouti</div>
+                                        <div class="item" data-value="Africa/Douala">Africa/Douala</div>
+                                        <div class="item" data-value="Africa/El_Aaiun">Africa/El_Aaiun</div>
+                                        <div class="item" data-value="Africa/Freetown">Africa/Freetown</div>
+                                        <div class="item" data-value="Africa/Gaborone">Africa/Gaborone</div>
+                                        <div class="item" data-value="Africa/Harare">Africa/Harare</div>
+                                        <div class="item" data-value="Africa/Johannesburg">Africa/Johannesburg</div>
+                                        <div class="item" data-value="Africa/Juba">Africa/Juba</div>
+                                        <div class="item" data-value="Africa/Kampala">Africa/Kampala</div>
+                                        <div class="item" data-value="Africa/Khartoum">Africa/Khartoum</div>
+                                        <div class="item" data-value="Africa/Kigali">Africa/Kigali</div>
+                                        <div class="item" data-value="Africa/Kinshasa">Africa/Kinshasa</div>
+                                        <div class="item" data-value="Africa/Lagos">Africa/Lagos</div>
+                                        <div class="item" data-value="Africa/Libreville">Africa/Libreville</div>
+                                        <div class="item" data-value="Africa/Lome">Africa/Lome</div>
+                                        <div class="item" data-value="Africa/Luanda">Africa/Luanda</div>
+                                        <div class="item" data-value="Africa/Lubumbashi">Africa/Lubumbashi</div>
+                                        <div class="item" data-value="Africa/Lusaka">Africa/Lusaka</div>
+                                        <div class="item" data-value="Africa/Malabo">Africa/Malabo</div>
+                                        <div class="item" data-value="Africa/Maputo">Africa/Maputo</div>
+                                        <div class="item" data-value="Africa/Maseru">Africa/Maseru</div>
+                                        <div class="item" data-value="Africa/Mbabane">Africa/Mbabane</div>
+                                        <div class="item" data-value="Africa/Mogadishu">Africa/Mogadishu</div>
+                                        <div class="item" data-value="Africa/Monrovia">Africa/Monrovia</div>
+                                        <div class="item" data-value="Africa/Nairobi">Africa/Nairobi</div>
+                                        <div class="item" data-value="Africa/Ndjamena">Africa/Ndjamena</div>
+                                        <div class="item" data-value="Africa/Niamey">Africa/Niamey</div>
+                                        <div class="item" data-value="Africa/Nouakchott">Africa/Nouakchott</div>
+                                        <div class="item" data-value="Africa/Ouagadougou">Africa/Ouagadougou</div>
+                                        <div class="item" data-value="Africa/Porto-Novo">Africa/Porto-Novo</div>
+                                        <div class="item" data-value="Africa/Sao_Tome">Africa/Sao_Tome</div>
+                                        <div class="item" data-value="Africa/Tripoli">Africa/Tripoli</div>
+                                        <div class="item" data-value="Africa/Tunis">Africa/Tunis</div>
+                                        <div class="item" data-value="Africa/Windhoek">Africa/Windhoek</div>
+                                        <div class="item" data-value="America/Adak">America/Adak</div>
+                                        <div class="item" data-value="America/Anchorage">America/Anchorage</div>
+                                        <div class="item" data-value="America/Anguilla">America/Anguilla</div>
+                                        <div class="item" data-value="America/Antigua">America/Antigua</div>
+                                        <div class="item" data-value="America/Araguaina">America/Araguaina</div>
+                                        <div class="item" data-value="America/Argentina/Buenos_Aires">America/Argentina/Buenos_Aires</div>
+                                        <div class="item" data-value="America/Argentina/Catamarca">America/Argentina/Catamarca</div>
+                                        <div class="item" data-value="America/Argentina/Cordoba">America/Argentina/Cordoba</div>
+                                        <div class="item" data-value="America/Argentina/Jujuy">America/Argentina/Jujuy</div>
+                                        <div class="item" data-value="America/Argentina/La_Rioja">America/Argentina/La_Rioja</div>
+                                        <div class="item" data-value="America/Argentina/Mendoza">America/Argentina/Mendoza</div>
+                                        <div class="item" data-value="America/Argentina/Rio_Gallegos">America/Argentina/Rio_Gallegos</div>
+                                        <div class="item" data-value="America/Argentina/Salta">America/Argentina/Salta</div>
+                                        <div class="item" data-value="America/Argentina/San_Juan">America/Argentina/San_Juan</div>
+                                        <div class="item" data-value="America/Argentina/San_Luis">America/Argentina/San_Luis</div>
+                                        <div class="item" data-value="America/Argentina/Tucuman">America/Argentina/Tucuman</div>
+                                        <div class="item" data-value="America/Argentina/Ushuaia">America/Argentina/Ushuaia</div>
+                                        <div class="item" data-value="America/Aruba">America/Aruba</div>
+                                        <div class="item" data-value="America/Asuncion">America/Asuncion</div>
+                                        <div class="item" data-value="America/Atikokan">America/Atikokan</div>
+                                        <div class="item" data-value="America/Bahia">America/Bahia</div>
+                                        <div class="item" data-value="America/Bahia_Banderas">America/Bahia_Banderas</div>
+                                        <div class="item" data-value="America/Barbados">America/Barbados</div>
+                                        <div class="item" data-value="America/Belem">America/Belem</div>
+                                        <div class="item" data-value="America/Belize">America/Belize</div>
+                                        <div class="item" data-value="America/Blanc-Sablon">America/Blanc-Sablon</div>
+                                        <div class="item" data-value="America/Boa_Vista">America/Boa_Vista</div>
+                                        <div class="item" data-value="America/Bogota">America/Bogota</div>
+                                        <div class="item" data-value="America/Boise">America/Boise</div>
+                                        <div class="item" data-value="America/Cambridge_Bay">America/Cambridge_Bay</div>
+                                        <div class="item" data-value="America/Campo_Grande">America/Campo_Grande</div>
+                                        <div class="item" data-value="America/Cancun">America/Cancun</div>
+                                        <div class="item" data-value="America/Caracas">America/Caracas</div>
+                                        <div class="item" data-value="America/Cayenne">America/Cayenne</div>
+                                        <div class="item" data-value="America/Cayman">America/Cayman</div>
+                                        <div class="item" data-value="America/Chicago"selected>America/Chicago</div>
+                                        <div class="item" data-value="America/Chihuahua">America/Chihuahua</div>
+                                        <div class="item" data-value="America/Costa_Rica">America/Costa_Rica</div>
+                                        <div class="item" data-value="America/Creston">America/Creston</div>
+                                        <div class="item" data-value="America/Cuiaba">America/Cuiaba</div>
+                                        <div class="item" data-value="America/Curacao">America/Curacao</div>
+                                        <div class="item" data-value="America/Danmarkshavn">America/Danmarkshavn</div>
+                                        <div class="item" data-value="America/Dawson">America/Dawson</div>
+                                        <div class="item" data-value="America/Dawson_Creek">America/Dawson_Creek</div>
+                                        <div class="item" data-value="America/Denver">America/Denver</div>
+                                        <div class="item" data-value="America/Detroit">America/Detroit</div>
+                                        <div class="item" data-value="America/Dominica">America/Dominica</div>
+                                        <div class="item" data-value="America/Edmonton">America/Edmonton</div>
+                                        <div class="item" data-value="America/Eirunepe">America/Eirunepe</div>
+                                        <div class="item" data-value="America/El_Salvador">America/El_Salvador</div>
+                                        <div class="item" data-value="America/Fortaleza">America/Fortaleza</div>
+                                        <div class="item" data-value="America/Glace_Bay">America/Glace_Bay</div>
+                                        <div class="item" data-value="America/Godthab">America/Godthab</div>
+                                        <div class="item" data-value="America/Goose_Bay">America/Goose_Bay</div>
+                                        <div class="item" data-value="America/Grand_Turk">America/Grand_Turk</div>
+                                        <div class="item" data-value="America/Grenada">America/Grenada</div>
+                                        <div class="item" data-value="America/Guadeloupe">America/Guadeloupe</div>
+                                        <div class="item" data-value="America/Guatemala">America/Guatemala</div>
+                                        <div class="item" data-value="America/Guayaquil">America/Guayaquil</div>
+                                        <div class="item" data-value="America/Guyana">America/Guyana</div>
+                                        <div class="item" data-value="America/Halifax">America/Halifax</div>
+                                        <div class="item" data-value="America/Havana">America/Havana</div>
+                                        <div class="item" data-value="America/Hermosillo">America/Hermosillo</div>
+                                        <div class="item" data-value="America/Indiana/Indianapolis">America/Indiana/Indianapolis</div>
+                                        <div class="item" data-value="America/Indiana/Knox">America/Indiana/Knox</div>
+                                        <div class="item" data-value="America/Indiana/Marengo">America/Indiana/Marengo</div>
+                                        <div class="item" data-value="America/Indiana/Petersburg">America/Indiana/Petersburg</div>
+                                        <div class="item" data-value="America/Indiana/Tell_City">America/Indiana/Tell_City</div>
+                                        <div class="item" data-value="America/Indiana/Vevay">America/Indiana/Vevay</div>
+                                        <div class="item" data-value="America/Indiana/Vincennes">America/Indiana/Vincennes</div>
+                                        <div class="item" data-value="America/Indiana/Winamac">America/Indiana/Winamac</div>
+                                        <div class="item" data-value="America/Inuvik">America/Inuvik</div>
+                                        <div class="item" data-value="America/Iqaluit">America/Iqaluit</div>
+                                        <div class="item" data-value="America/Jamaica">America/Jamaica</div>
+                                        <div class="item" data-value="America/Juneau">America/Juneau</div>
+                                        <div class="item" data-value="America/Kentucky/Louisville">America/Kentucky/Louisville</div>
+                                        <div class="item" data-value="America/Kentucky/Monticello">America/Kentucky/Monticello</div>
+                                        <div class="item" data-value="America/Kralendijk">America/Kralendijk</div>
+                                        <div class="item" data-value="America/La_Paz">America/La_Paz</div>
+                                        <div class="item" data-value="America/Lima">America/Lima</div>
+                                        <div class="item" data-value="America/Los_Angeles">America/Los_Angeles</div>
+                                        <div class="item" data-value="America/Lower_Princes">America/Lower_Princes</div>
+                                        <div class="item" data-value="America/Maceio">America/Maceio</div>
+                                        <div class="item" data-value="America/Managua">America/Managua</div>
+                                        <div class="item" data-value="America/Manaus">America/Manaus</div>
+                                        <div class="item" data-value="America/Marigot">America/Marigot</div>
+                                        <div class="item" data-value="America/Martinique">America/Martinique</div>
+                                        <div class="item" data-value="America/Matamoros">America/Matamoros</div>
+                                        <div class="item" data-value="America/Mazatlan">America/Mazatlan</div>
+                                        <div class="item" data-value="America/Menominee">America/Menominee</div>
+                                        <div class="item" data-value="America/Merida">America/Merida</div>
+                                        <div class="item" data-value="America/Metlakatla">America/Metlakatla</div>
+                                        <div class="item" data-value="America/Mexico_City">America/Mexico_City</div>
+                                        <div class="item" data-value="America/Miquelon">America/Miquelon</div>
+                                        <div class="item" data-value="America/Moncton">America/Moncton</div>
+                                        <div class="item" data-value="America/Monterrey">America/Monterrey</div>
+                                        <div class="item" data-value="America/Montevideo">America/Montevideo</div>
+                                        <div class="item" data-value="America/Montreal">America/Montreal</div>
+                                        <div class="item" data-value="America/Montserrat">America/Montserrat</div>
+                                        <div class="item" data-value="America/Nassau">America/Nassau</div>
+                                        <div class="item" data-value="America/New_York">America/New_York</div>
+                                        <div class="item" data-value="America/Nipigon">America/Nipigon</div>
+                                        <div class="item" data-value="America/Nome">America/Nome</div>
+                                        <div class="item" data-value="America/Noronha">America/Noronha</div>
+                                        <div class="item" data-value="America/North_Dakota/Beulah">America/North_Dakota/Beulah</div>
+                                        <div class="item" data-value="America/North_Dakota/Center">America/North_Dakota/Center</div>
+                                        <div class="item" data-value="America/North_Dakota/New_Salem">America/North_Dakota/New_Salem</div>
+                                        <div class="item" data-value="America/Ojinaga">America/Ojinaga</div>
+                                        <div class="item" data-value="America/Panama">America/Panama</div>
+                                        <div class="item" data-value="America/Pangnirtung">America/Pangnirtung</div>
+                                        <div class="item" data-value="America/Paramaribo">America/Paramaribo</div>
+                                        <div class="item" data-value="America/Phoenix">America/Phoenix</div>
+                                        <div class="item" data-value="America/Port-au-Prince">America/Port-au-Prince</div>
+                                        <div class="item" data-value="America/Port_of_Spain">America/Port_of_Spain</div>
+                                        <div class="item" data-value="America/Porto_Velho">America/Porto_Velho</div>
+                                        <div class="item" data-value="America/Puerto_Rico">America/Puerto_Rico</div>
+                                        <div class="item" data-value="America/Rainy_River">America/Rainy_River</div>
+                                        <div class="item" data-value="America/Rankin_Inlet">America/Rankin_Inlet</div>
+                                        <div class="item" data-value="America/Recife">America/Recife</div>
+                                        <div class="item" data-value="America/Regina">America/Regina</div>
+                                        <div class="item" data-value="America/Resolute">America/Resolute</div>
+                                        <div class="item" data-value="America/Rio_Branco">America/Rio_Branco</div>
+                                        <div class="item" data-value="America/Santa_Isabel">America/Santa_Isabel</div>
+                                        <div class="item" data-value="America/Santarem">America/Santarem</div>
+                                        <div class="item" data-value="America/Santiago">America/Santiago</div>
+                                        <div class="item" data-value="America/Santo_Domingo">America/Santo_Domingo</div>
+                                        <div class="item" data-value="America/Sao_Paulo">America/Sao_Paulo</div>
+                                        <div class="item" data-value="America/Scoresbysund">America/Scoresbysund</div>
+                                        <div class="item" data-value="America/Shiprock">America/Shiprock</div>
+                                        <div class="item" data-value="America/Sitka">America/Sitka</div>
+                                        <div class="item" data-value="America/St_Barthelemy">America/St_Barthelemy</div>
+                                        <div class="item" data-value="America/St_Johns">America/St_Johns</div>
+                                        <div class="item" data-value="America/St_Kitts">America/St_Kitts</div>
+                                        <div class="item" data-value="America/St_Lucia">America/St_Lucia</div>
+                                        <div class="item" data-value="America/St_Thomas">America/St_Thomas</div>
+                                        <div class="item" data-value="America/St_Vincent">America/St_Vincent</div>
+                                        <div class="item" data-value="America/Swift_Current">America/Swift_Current</div>
+                                        <div class="item" data-value="America/Tegucigalpa">America/Tegucigalpa</div>
+                                        <div class="item" data-value="America/Thule">America/Thule</div>
+                                        <div class="item" data-value="America/Thunder_Bay">America/Thunder_Bay</div>
+                                        <div class="item" data-value="America/Tijuana">America/Tijuana</div>
+                                        <div class="item" data-value="America/Toronto">America/Toronto</div>
+                                        <div class="item" data-value="America/Tortola">America/Tortola</div>
+                                        <div class="item" data-value="America/Vancouver">America/Vancouver</div>
+                                        <div class="item" data-value="America/Whitehorse">America/Whitehorse</div>
+                                        <div class="item" data-value="America/Winnipeg">America/Winnipeg</div>
+                                        <div class="item" data-value="America/Yakutat">America/Yakutat</div>
+                                        <div class="item" data-value="America/Yellowknife">America/Yellowknife</div>
+                                        <div class="item" data-value="Antarctica/Casey">Antarctica/Casey</div>
+                                        <div class="item" data-value="Antarctica/Davis">Antarctica/Davis</div>
+                                        <div class="item" data-value="Antarctica/DumontDUrville">Antarctica/DumontDUrville</div>
+                                        <div class="item" data-value="Antarctica/Macquarie">Antarctica/Macquarie</div>
+                                        <div class="item" data-value="Antarctica/Mawson">Antarctica/Mawson</div>
+                                        <div class="item" data-value="Antarctica/McMurdo">Antarctica/McMurdo</div>
+                                        <div class="item" data-value="Antarctica/Palmer">Antarctica/Palmer</div>
+                                        <div class="item" data-value="Antarctica/Rothera">Antarctica/Rothera</div>
+                                        <div class="item" data-value="Antarctica/South_Pole">Antarctica/South_Pole</div>
+                                        <div class="item" data-value="Antarctica/Syowa">Antarctica/Syowa</div>
+                                        <div class="item" data-value="Antarctica/Vostok">Antarctica/Vostok</div>
+                                        <div class="item" data-value="Arctic/Longyearbyen">Arctic/Longyearbyen</div>
+                                        <div class="item" data-value="Asia/Aden">Asia/Aden</div>
+                                        <div class="item" data-value="Asia/Almaty">Asia/Almaty</div>
+                                        <div class="item" data-value="Asia/Amman">Asia/Amman</div>
+                                        <div class="item" data-value="Asia/Anadyr">Asia/Anadyr</div>
+                                        <div class="item" data-value="Asia/Aqtau">Asia/Aqtau</div>
+                                        <div class="item" data-value="Asia/Aqtobe">Asia/Aqtobe</div>
+                                        <div class="item" data-value="Asia/Ashgabat">Asia/Ashgabat</div>
+                                        <div class="item" data-value="Asia/Baghdad">Asia/Baghdad</div>
+                                        <div class="item" data-value="Asia/Bahrain">Asia/Bahrain</div>
+                                        <div class="item" data-value="Asia/Baku">Asia/Baku</div>
+                                        <div class="item" data-value="Asia/Bangkok">Asia/Bangkok</div>
+                                        <div class="item" data-value="Asia/Beirut">Asia/Beirut</div>
+                                        <div class="item" data-value="Asia/Bishkek">Asia/Bishkek</div>
+                                        <div class="item" data-value="Asia/Brunei">Asia/Brunei</div>
+                                        <div class="item" data-value="Asia/Choibalsan">Asia/Choibalsan</div>
+                                        <div class="item" data-value="Asia/Chongqing">Asia/Chongqing</div>
+                                        <div class="item" data-value="Asia/Colombo">Asia/Colombo</div>
+                                        <div class="item" data-value="Asia/Damascus">Asia/Damascus</div>
+                                        <div class="item" data-value="Asia/Dhaka">Asia/Dhaka</div>
+                                        <div class="item" data-value="Asia/Dili">Asia/Dili</div>
+                                        <div class="item" data-value="Asia/Dubai">Asia/Dubai</div>
+                                        <div class="item" data-value="Asia/Dushanbe">Asia/Dushanbe</div>
+                                        <div class="item" data-value="Asia/Gaza">Asia/Gaza</div>
+                                        <div class="item" data-value="Asia/Harbin">Asia/Harbin</div>
+                                        <div class="item" data-value="Asia/Hebron">Asia/Hebron</div>
+                                        <div class="item" data-value="Asia/Ho_Chi_Minh">Asia/Ho_Chi_Minh</div>
+                                        <div class="item" data-value="Asia/Hong_Kong">Asia/Hong_Kong</div>
+                                        <div class="item" data-value="Asia/Hovd">Asia/Hovd</div>
+                                        <div class="item" data-value="Asia/Irkutsk">Asia/Irkutsk</div>
+                                        <div class="item" data-value="Asia/Jakarta">Asia/Jakarta</div>
+                                        <div class="item" data-value="Asia/Jayapura">Asia/Jayapura</div>
+                                        <div class="item" data-value="Asia/Jerusalem">Asia/Jerusalem</div>
+                                        <div class="item" data-value="Asia/Kabul">Asia/Kabul</div>
+                                        <div class="item" data-value="Asia/Kamchatka">Asia/Kamchatka</div>
+                                        <div class="item" data-value="Asia/Karachi">Asia/Karachi</div>
+                                        <div class="item" data-value="Asia/Kashgar">Asia/Kashgar</div>
+                                        <div class="item" data-value="Asia/Kathmandu">Asia/Kathmandu</div>
+                                        <div class="item" data-value="Asia/Khandyga">Asia/Khandyga</div>
+                                        <div class="item" data-value="Asia/Kolkata">Asia/Kolkata</div>
+                                        <div class="item" data-value="Asia/Krasnoyarsk">Asia/Krasnoyarsk</div>
+                                        <div class="item" data-value="Asia/Kuala_Lumpur">Asia/Kuala_Lumpur</div>
+                                        <div class="item" data-value="Asia/Kuching">Asia/Kuching</div>
+                                        <div class="item" data-value="Asia/Kuwait">Asia/Kuwait</div>
+                                        <div class="item" data-value="Asia/Macau">Asia/Macau</div>
+                                        <div class="item" data-value="Asia/Magadan">Asia/Magadan</div>
+                                        <div class="item" data-value="Asia/Makassar">Asia/Makassar</div>
+                                        <div class="item" data-value="Asia/Manila">Asia/Manila</div>
+                                        <div class="item" data-value="Asia/Muscat">Asia/Muscat</div>
+                                        <div class="item" data-value="Asia/Nicosia">Asia/Nicosia</div>
+                                        <div class="item" data-value="Asia/Novokuznetsk">Asia/Novokuznetsk</div>
+                                        <div class="item" data-value="Asia/Novosibirsk">Asia/Novosibirsk</div>
+                                        <div class="item" data-value="Asia/Omsk">Asia/Omsk</div>
+                                        <div class="item" data-value="Asia/Oral">Asia/Oral</div>
+                                        <div class="item" data-value="Asia/Phnom_Penh">Asia/Phnom_Penh</div>
+                                        <div class="item" data-value="Asia/Pontianak">Asia/Pontianak</div>
+                                        <div class="item" data-value="Asia/Pyongyang">Asia/Pyongyang</div>
+                                        <div class="item" data-value="Asia/Qatar">Asia/Qatar</div>
+                                        <div class="item" data-value="Asia/Qyzylorda">Asia/Qyzylorda</div>
+                                        <div class="item" data-value="Asia/Rangoon">Asia/Rangoon</div>
+                                        <div class="item" data-value="Asia/Riyadh">Asia/Riyadh</div>
+                                        <div class="item" data-value="Asia/Sakhalin">Asia/Sakhalin</div>
+                                        <div class="item" data-value="Asia/Samarkand">Asia/Samarkand</div>
+                                        <div class="item" data-value="Asia/Seoul">Asia/Seoul</div>
+                                        <div class="item" data-value="Asia/Shanghai">Asia/Shanghai</div>
+                                        <div class="item" data-value="Asia/Singapore">Asia/Singapore</div>
+                                        <div class="item" data-value="Asia/Taipei">Asia/Taipei</div>
+                                        <div class="item" data-value="Asia/Tashkent">Asia/Tashkent</div>
+                                        <div class="item" data-value="Asia/Tbilisi">Asia/Tbilisi</div>
+                                        <div class="item" data-value="Asia/Tehran">Asia/Tehran</div>
+                                        <div class="item" data-value="Asia/Thimphu">Asia/Thimphu</div>
+                                        <div class="item" data-value="Asia/Tokyo">Asia/Tokyo</div>
+                                        <div class="item" data-value="Asia/Ulaanbaatar">Asia/Ulaanbaatar</div>
+                                        <div class="item" data-value="Asia/Urumqi">Asia/Urumqi</div>
+                                        <div class="item" data-value="Asia/Ust-Nera">Asia/Ust-Nera</div>
+                                        <div class="item" data-value="Asia/Vientiane">Asia/Vientiane</div>
+                                        <div class="item" data-value="Asia/Vladivostok">Asia/Vladivostok</div>
+                                        <div class="item" data-value="Asia/Yakutsk">Asia/Yakutsk</div>
+                                        <div class="item" data-value="Asia/Yekaterinburg">Asia/Yekaterinburg</div>
+                                        <div class="item" data-value="Asia/Yerevan">Asia/Yerevan</div>
+                                        <div class="item" data-value="Atlantic/Azores">Atlantic/Azores</div>
+                                        <div class="item" data-value="Atlantic/Bermuda">Atlantic/Bermuda</div>
+                                        <div class="item" data-value="Atlantic/Canary">Atlantic/Canary</div>
+                                        <div class="item" data-value="Atlantic/Cape_Verde">Atlantic/Cape_Verde</div>
+                                        <div class="item" data-value="Atlantic/Faroe">Atlantic/Faroe</div>
+                                        <div class="item" data-value="Atlantic/Madeira">Atlantic/Madeira</div>
+                                        <div class="item" data-value="Atlantic/Reykjavik">Atlantic/Reykjavik</div>
+                                        <div class="item" data-value="Atlantic/South_Georgia">Atlantic/South_Georgia</div>
+                                        <div class="item" data-value="Atlantic/St_Helena">Atlantic/St_Helena</div>
+                                        <div class="item" data-value="Atlantic/Stanley">Atlantic/Stanley</div>
+                                        <div class="item" data-value="Australia/Adelaide">Australia/Adelaide</div>
+                                        <div class="item" data-value="Australia/Brisbane">Australia/Brisbane</div>
+                                        <div class="item" data-value="Australia/Broken_Hill">Australia/Broken_Hill</div>
+                                        <div class="item" data-value="Australia/Currie">Australia/Currie</div>
+                                        <div class="item" data-value="Australia/Darwin">Australia/Darwin</div>
+                                        <div class="item" data-value="Australia/Eucla">Australia/Eucla</div>
+                                        <div class="item" data-value="Australia/Hobart">Australia/Hobart</div>
+                                        <div class="item" data-value="Australia/Lindeman">Australia/Lindeman</div>
+                                        <div class="item" data-value="Australia/Lord_Howe">Australia/Lord_Howe</div>
+                                        <div class="item" data-value="Australia/Melbourne">Australia/Melbourne</div>
+                                        <div class="item" data-value="Australia/Perth">Australia/Perth</div>
+                                        <div class="item" data-value="Australia/Sydney">Australia/Sydney</div>
+                                        <div class="item" data-value="Europe/Amsterdam">Europe/Amsterdam</div>
+                                        <div class="item" data-value="Europe/Andorra">Europe/Andorra</div>
+                                        <div class="item" data-value="Europe/Athens">Europe/Athens</div>
+                                        <div class="item" data-value="Europe/Belgrade">Europe/Belgrade</div>
+                                        <div class="item" data-value="Europe/Berlin">Europe/Berlin</div>
+                                        <div class="item" data-value="Europe/Bratislava">Europe/Bratislava</div>
+                                        <div class="item" data-value="Europe/Brussels">Europe/Brussels</div>
+                                        <div class="item" data-value="Europe/Bucharest">Europe/Bucharest</div>
+                                        <div class="item" data-value="Europe/Budapest">Europe/Budapest</div>
+                                        <div class="item" data-value="Europe/Busingen">Europe/Busingen</div>
+                                        <div class="item" data-value="Europe/Chisinau">Europe/Chisinau</div>
+                                        <div class="item" data-value="Europe/Copenhagen">Europe/Copenhagen</div>
+                                        <div class="item" data-value="Europe/Dublin">Europe/Dublin</div>
+                                        <div class="item" data-value="Europe/Gibraltar">Europe/Gibraltar</div>
+                                        <div class="item" data-value="Europe/Guernsey">Europe/Guernsey</div>
+                                        <div class="item" data-value="Europe/Helsinki">Europe/Helsinki</div>
+                                        <div class="item" data-value="Europe/Isle_of_Man">Europe/Isle_of_Man</div>
+                                        <div class="item" data-value="Europe/Istanbul">Europe/Istanbul</div>
+                                        <div class="item" data-value="Europe/Jersey">Europe/Jersey</div>
+                                        <div class="item" data-value="Europe/Kaliningrad">Europe/Kaliningrad</div>
+                                        <div class="item" data-value="Europe/Kiev">Europe/Kiev</div>
+                                        <div class="item" data-value="Europe/Lisbon">Europe/Lisbon</div>
+                                        <div class="item" data-value="Europe/Ljubljana">Europe/Ljubljana</div>
+                                        <div class="item" data-value="Europe/London">Europe/London</div>
+                                        <div class="item" data-value="Europe/Luxembourg">Europe/Luxembourg</div>
+                                        <div class="item" data-value="Europe/Madrid">Europe/Madrid</div>
+                                        <div class="item" data-value="Europe/Malta">Europe/Malta</div>
+                                        <div class="item" data-value="Europe/Mariehamn">Europe/Mariehamn</div>
+                                        <div class="item" data-value="Europe/Minsk">Europe/Minsk</div>
+                                        <div class="item" data-value="Europe/Monaco">Europe/Monaco</div>
+                                        <div class="item" data-value="Europe/Moscow">Europe/Moscow</div>
+                                        <div class="item" data-value="Europe/Oslo">Europe/Oslo</div>
+                                        <div class="item" data-value="Europe/Paris">Europe/Paris</div>
+                                        <div class="item" data-value="Europe/Podgorica">Europe/Podgorica</div>
+                                        <div class="item" data-value="Europe/Prague">Europe/Prague</div>
+                                        <div class="item" data-value="Europe/Riga">Europe/Riga</div>
+                                        <div class="item" data-value="Europe/Rome">Europe/Rome</div>
+                                        <div class="item" data-value="Europe/Samara">Europe/Samara</div>
+                                        <div class="item" data-value="Europe/San_Marino">Europe/San_Marino</div>
+                                        <div class="item" data-value="Europe/Sarajevo">Europe/Sarajevo</div>
+                                        <div class="item" data-value="Europe/Simferopol">Europe/Simferopol</div>
+                                        <div class="item" data-value="Europe/Skopje">Europe/Skopje</div>
+                                        <div class="item" data-value="Europe/Sofia">Europe/Sofia</div>
+                                        <div class="item" data-value="Europe/Stockholm">Europe/Stockholm</div>
+                                        <div class="item" data-value="Europe/Tallinn">Europe/Tallinn</div>
+                                        <div class="item" data-value="Europe/Tirane">Europe/Tirane</div>
+                                        <div class="item" data-value="Europe/Uzhgorod">Europe/Uzhgorod</div>
+                                        <div class="item" data-value="Europe/Vaduz">Europe/Vaduz</div>
+                                        <div class="item" data-value="Europe/Vatican">Europe/Vatican</div>
+                                        <div class="item" data-value="Europe/Vienna">Europe/Vienna</div>
+                                        <div class="item" data-value="Europe/Vilnius">Europe/Vilnius</div>
+                                        <div class="item" data-value="Europe/Volgograd">Europe/Volgograd</div>
+                                        <div class="item" data-value="Europe/Warsaw">Europe/Warsaw</div>
+                                        <div class="item" data-value="Europe/Zagreb">Europe/Zagreb</div>
+                                        <div class="item" data-value="Europe/Zaporozhye">Europe/Zaporozhye</div>
+                                        <div class="item" data-value="Europe/Zurich">Europe/Zurich</div>
+                                        <div class="item" data-value="Indian/Antananarivo">Indian/Antananarivo</div>
+                                        <div class="item" data-value="Indian/Chagos">Indian/Chagos</div>
+                                        <div class="item" data-value="Indian/Christmas">Indian/Christmas</div>
+                                        <div class="item" data-value="Indian/Cocos">Indian/Cocos</div>
+                                        <div class="item" data-value="Indian/Comoro">Indian/Comoro</div>
+                                        <div class="item" data-value="Indian/Kerguelen">Indian/Kerguelen</div>
+                                        <div class="item" data-value="Indian/Mahe">Indian/Mahe</div>
+                                        <div class="item" data-value="Indian/Maldives">Indian/Maldives</div>
+                                        <div class="item" data-value="Indian/Mauritius">Indian/Mauritius</div>
+                                        <div class="item" data-value="Indian/Mayotte">Indian/Mayotte</div>
+                                        <div class="item" data-value="Indian/Reunion">Indian/Reunion</div>
+                                        <div class="item" data-value="Pacific/Apia">Pacific/Apia</div>
+                                        <div class="item" data-value="Pacific/Auckland">Pacific/Auckland</div>
+                                        <div class="item" data-value="Pacific/Chatham">Pacific/Chatham</div>
+                                        <div class="item" data-value="Pacific/Chuuk">Pacific/Chuuk</div>
+                                        <div class="item" data-value="Pacific/Easter">Pacific/Easter</div>
+                                        <div class="item" data-value="Pacific/Efate">Pacific/Efate</div>
+                                        <div class="item" data-value="Pacific/Enderbury">Pacific/Enderbury</div>
+                                        <div class="item" data-value="Pacific/Fakaofo">Pacific/Fakaofo</div>
+                                        <div class="item" data-value="Pacific/Fiji">Pacific/Fiji</div>
+                                        <div class="item" data-value="Pacific/Funafuti">Pacific/Funafuti</div>
+                                        <div class="item" data-value="Pacific/Galapagos">Pacific/Galapagos</div>
+                                        <div class="item" data-value="Pacific/Gambier">Pacific/Gambier</div>
+                                        <div class="item" data-value="Pacific/Guadalcanal">Pacific/Guadalcanal</div>
+                                        <div class="item" data-value="Pacific/Guam">Pacific/Guam</div>
+                                        <div class="item" data-value="Pacific/Honolulu">Pacific/Honolulu</div>
+                                        <div class="item" data-value="Pacific/Johnston">Pacific/Johnston</div>
+                                        <div class="item" data-value="Pacific/Kiritimati">Pacific/Kiritimati</div>
+                                        <div class="item" data-value="Pacific/Kosrae">Pacific/Kosrae</div>
+                                        <div class="item" data-value="Pacific/Kwajalein">Pacific/Kwajalein</div>
+                                        <div class="item" data-value="Pacific/Majuro">Pacific/Majuro</div>
+                                        <div class="item" data-value="Pacific/Marquesas">Pacific/Marquesas</div>
+                                        <div class="item" data-value="Pacific/Midway">Pacific/Midway</div>
+                                        <div class="item" data-value="Pacific/Nauru">Pacific/Nauru</div>
+                                        <div class="item" data-value="Pacific/Niue">Pacific/Niue</div>
+                                        <div class="item" data-value="Pacific/Norfolk">Pacific/Norfolk</div>
+                                        <div class="item" data-value="Pacific/Noumea">Pacific/Noumea</div>
+                                        <div class="item" data-value="Pacific/Pago_Pago">Pacific/Pago_Pago</div>
+                                        <div class="item" data-value="Pacific/Palau">Pacific/Palau</div>
+                                        <div class="item" data-value="Pacific/Pitcairn">Pacific/Pitcairn</div>
+                                        <div class="item" data-value="Pacific/Pohnpei">Pacific/Pohnpei</div>
+                                        <div class="item" data-value="Pacific/Port_Moresby">Pacific/Port_Moresby</div>
+                                        <div class="item" data-value="Pacific/Rarotonga">Pacific/Rarotonga</div>
+                                        <div class="item" data-value="Pacific/Saipan">Pacific/Saipan</div>
+                                        <div class="item" data-value="Pacific/Tahiti">Pacific/Tahiti</div>
+                                        <div class="item" data-value="Pacific/Tarawa">Pacific/Tarawa</div>
+                                        <div class="item" data-value="Pacific/Tongatapu">Pacific/Tongatapu</div>
+                                        <div class="item" data-value="Pacific/Wake">Pacific/Wake</div>
+                                        <div class="item" data-value="Pacific/Wallis">Pacific/Wallis</div>
+                                        <div class="item" data-value="UTC">UTC</div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>PHP Modules:</label>
+                        <input type="text" name="php_modules" />
+                    </div>
+                    <div class="field">
+                        <label>PEAR Modules:</label>
+                        <input type="text" name="pear_modules" />
+                    </div>
+                    <div class="field">
+                        <label>PECL Modules:</label>
+                        <input type="text" name="pecl_modules" />
+                    </div>
+                </div>
+            </section>
+
+            <h2 class="ui dividing header">Database - MySQL</h2>
+            <section>
+                <h3 class="ui header">Instructions:</h3>
+                <p>Pulvinar etiam eu platea ac vel! Integer et, dis phasellus, sed lectus adipiscing nascetur dolor augue diam ultrices! Nascetur elit! Adipiscing. Habitasse integer ac, ultrices magnis proin proin risus facilisis dis parturient! Aenean est, et ut, pulvinar quis aenean, dignissim.</p>
+                <div class="ui piled segment">
+                    <div class="ui top attached black label">Details</div>
+                    <div class="three fields">
+                        <div class="field">
+                            <label>Root Password:</label>
+                            <div class="ui left labeled input">
+                                <input type="text" name="mysql_password" />
+                                <div class="ui corner label">
+                                    <i class="icon asterisk"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>PHPMyAdmin:</label>
+                            <input type="hidden" name="phpmyadmin" value="0" />
+                            <div class="ui fluid toggle black button phpmyadmin">Disabled</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <button class="ui fluid labeled purple icon button" type="submit"><i class="download cloud icon"></i> Generate</button>
+            </section>
+        </form>
     </div>
 </body>
 </html>

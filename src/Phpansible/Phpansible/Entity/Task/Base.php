@@ -9,11 +9,35 @@
 
 namespace Phpansible\Phpansible\Entity\Task;
 
-abstract class Base
+class Base implements \IteratorAggregate
 {
+    /**
+     * @var sring
+     * @access protected
+     */
     protected $name;
 
-    protected $action;
+    /**
+     * @var array
+     * @access protected
+     */
+    protected $lines = array();
+
+    /**
+     * @param string $name
+     * @access public
+     * @return void
+     */
+    public function __construct($name)
+    {
+        $this->setName($name);
+        $this->lines[0] = $this->getOutputName();
+    }
+
+    public function getIterator()
+    {
+        return new \ArrayIterator($this->lines);
+    }
 
     /**
      * @param string $name
@@ -22,29 +46,24 @@ abstract class Base
      */
     public function setName($name)
     {
+        if (! is_string($name)) {
+            throw new InvalidArgumentException("\$name must be a string");
+        }
+
         $this->name = $name;
     }
 
-    public function getName()
-    {
-        return "- name: {$this->name}";
-    }
-
     /**
-     * @abstract
-     * @param string $action
-     * @access public
-     * @return void
-     */
-    public abstract function setAction($action);
-
-    /**
-     * Must return commands for output file.
-     *   return "- name: example\n\tcommand: /some/path";
-     *
-     * @abstract
      * @access public
      * @return string
      */
-    public abstract function getOutput();
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    private function getOutputName()
+    {
+        return "- name: {$this->name}";
+    }
 }

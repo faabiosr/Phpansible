@@ -1,9 +1,15 @@
 
 function Main() {
-
+    this.templates = {
+        'synced-folders': $('.ui.segment.synced-folders').clone(),
+        'fowarded-ports': $('.ui.segment.fowarded-ports').clone(),
+        'webserver-vhost': $('.ui.segment.webserver-vhost').clone()
+    }
 }
 
 Main.prototype.form = function() {
+
+    var that = this;
 
     var checkbox  = $('.ui.checkbox'),
         dropdown  = $('.ui.selection.dropdown')
@@ -20,10 +26,10 @@ Main.prototype.form = function() {
             inactive: 'Disabled'
         },
         onActivate: function() {
-            $('input[name=phpmyadmin]').val(1);
+            $('input#phpmyadmin').val(1);
         },
         onDeactivate: function() {
-            $('input[name=phpmyadmin]').val(0);
+            $('input#phpmyadmin').val(0);
         }
     });
 
@@ -33,10 +39,10 @@ Main.prototype.form = function() {
             inactive: 'Disabled'
         },
         onActivate: function() {
-            $('input[name=composer]').val(1);
+            $('input#composer').val(1);
         },
         onDeactivate: function() {
-            $('input[name=composer]').val(0);
+            $('input#composer').val(0);
         }
     });
 
@@ -53,7 +59,10 @@ Main.prototype.form = function() {
             .data('value'));
     });
 
-    addButton.on('click', this.addSegment);
+    addButton.on('click', function(){
+        that.addSegment(this);
+    });
+
     this.removePort();
 
     $('input.selectized').selectize({
@@ -73,17 +82,13 @@ Main.prototype.form = function() {
         plugins: ['remove_button'],
         delimiter: ',',
         persist: false,
-        create: function(input) {
-            return {
-                value: input,
-                text: input
-            }
-        },
         maxItems: null,
         valueField: 'value',
         labelField: 'text',
         searchField: 'value'
     });
+
+    $('select.selectized-single').selectize();
 }
 
 Main.prototype.waypoints = function() {
@@ -126,19 +131,44 @@ Main.prototype.waypoints = function() {
     });
 }
 
-Main.prototype.addSegment = function() {
+Main.prototype.addSegment = function(element) {
 
-    var segments = $(this).closest('.ui.segment')
+    var segments = $(element).closest('.ui.segment')
                         .find('.ui.segment');
 
-    var clone = segments.first()
-                    .clone(true, true);
+    var clone;
+
+    if (segments.last().hasClass('synced-folders')) {
+        clone = this.templates['synced-folders'].clone(true, true);
+    }
+
+    if (segments.last().hasClass('fowarded-ports')) {
+        clone = this.templates['fowarded-ports'].clone(true, true);
+    }
+
+    if (segments.last().hasClass('webserver-vhost')) {
+        clone = this.templates['webserver-vhost'].clone(true, true);
+    }
+
+    var segmentId = segments.length + 1;
+
+    clone.find(':input[name]').each(function(){
+        $(this).attr('name', $(this).attr('name').replace(/\d/gi, segmentId));
+        $(this).attr('id', $(this).attr('id').replace(/\d/gi, segmentId));
+        $(this).closest('.field').find('label').attr('for', $(this).closest('.field').find('label').attr('for').replace(/\d/gi, segmentId));
+    });
+
+    clone.find('select').selectize();
+
+    clone.data('id', segmentId)
+        .attr('data-id', segmentId);
 
     clone.find('input')
         .val('');
 
-    segments.last()
-        .after(clone);
+    segments.last().after(clone);
+
+    this.removePort();
 }
 
 Main.prototype.removePort = function() {

@@ -3,7 +3,8 @@ function Main() {
     this.templates = {
         'synced-folders': $('.ui.segment.synced-folders').clone(),
         'fowarded-ports': $('.ui.segment.fowarded-ports').clone(),
-        'webserver-vhost': $('.ui.segment.webserver-vhost').clone()
+        'webserver-vhost': $('.ui.segment.webserver-vhost').clone(),
+        'mysql-database': $('.ui.segment.mysql-database').clone()
     }
 }
 
@@ -150,6 +151,10 @@ Main.prototype.addSegment = function(element) {
         clone = this.templates['webserver-vhost'].clone(true, true);
     }
 
+    if (segments.last().hasClass('mysql-database')) {
+        clone = this.templates['mysql-database'].clone(true, true);
+    }
+
     var segmentId = segments.length + 1;
 
     clone.find(':input[name]').each(function(){
@@ -158,7 +163,16 @@ Main.prototype.addSegment = function(element) {
         $(this).closest('.field').find('label').attr('for', $(this).closest('.field').find('label').attr('for').replace(/\d/gi, segmentId));
     });
 
-    clone.find('select').selectize();
+    clone.find('select.selectized-single').selectize();
+    clone.find('select.selectized').selectize({
+        plugins: ['remove_button'],
+        delimiter: ',',
+        persist: false,
+        maxItems: null,
+        valueField: 'value',
+        labelField: 'text',
+        searchField: 'value'
+    });
 
     clone.data('id', segmentId)
         .attr('data-id', segmentId);
@@ -260,7 +274,8 @@ Main.prototype.validation = function() {
 
     $('.ui.form').form(validationRules, {
         inline: true,
-        on: 'blur'
+        on: 'blur',
+        keyboardShortcuts: false
     });
 }
 

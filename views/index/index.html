@@ -97,7 +97,7 @@
                         <div class="field">
                             <label for="ip_address">IP Address:</label>
                             <div class="ui left labeled input">
-                                <input type="text" id="ip_address" name="vm[ip]" />
+                                <input type="text" id="ip_address" name="vm[ip]" placeholder="192.168.100.100" />
                                 <div class="ui corner label">
                                     <i class="icon asterisk"></i>
                                 </div>
@@ -106,7 +106,7 @@
                         <div class="field">
                             <label for="memory">Memory</label>
                             <div class="ui left labeled input">
-                                <input type="text" id="memory" name="vm[memory]" />
+                                <input type="text" id="memory" name="vm[memory]" placeholder="512" value="512" />
                                 <div class="ui corner label">
                                     <i class="icon asterisk"></i>
                                 </div>
@@ -123,11 +123,11 @@
                                 <div class="two fields">
                                     <div class="field">
                                         <label for="host_port_0">Host Port:</label>
-                                        <input type="text" id="host_port_0" class="host-port" name="vm[forwarded][0][host_port]" />
+                                        <input type="text" id="host_port_0" class="host-port" name="vm[forwarded][0][host_port]" placeholder="8080" />
                                     </div>
                                     <div class="field">
                                         <label for="vm_port_0">VM Port:</label>
-                                        <input type="text" id="vm_port_0" class="vm-port" name="vm[forwarded][0][vm_port]" />
+                                        <input type="text" id="vm_port_0" class="vm-port" name="vm[forwarded][0][vm_port]" placeholder="80" />
                                     </div>
                                 </div>
                             </div>
@@ -156,11 +156,11 @@
                                     </div>
                                     <div class="field">
                                         <label for="folder_source_0">Folder Source:</label>
-                                        <input type="text" id="folder_source_0" class="folder-source" name="vm[synced][0][folder_source]" />
+                                        <input type="text" id="folder_source_0" class="folder-source" name="vm[synced][0][folder_source]" placeholder="/path/to/your/files" />
                                     </div>
                                     <div class="field">
                                         <label for="folder_target_0" class="folder_target_0">Folder Target:</label>
-                                        <input type="text" id="folder_target_0" class="folder-target" name="vm[synced][0][folder_target]" />
+                                        <input type="text" id="folder_target_0" class="folder-target" name="vm[synced][0][folder_target]" placeholder="/path/on/vm" />
                                     </div>
                                 </div>
                             </div>
@@ -197,8 +197,8 @@
                         <label for="modules">Modules:</label>
                         <select id="modules" name="webserver[modules][]" class="selectized" multiple>
                             <option value=""></option>
-                            <option value="cache" selected>cache</option>
-                            <option value="cgid" selected>cgid</option>
+                            <option value="cache">cache</option>
+                            <option value="cgid">cgid</option>
                             <option value="dav">dav</option>
                             <option value="dav_fs">dav_fs</option>
                             <option value="disk_cache">disk_cache</option>
@@ -206,7 +206,7 @@
                             <option value="info">info</option>
                             <option value="ldap">ldap</option>
                             <option value="mime_magic">mime_magic</option>
-                            <option value="php" selected>php</option>
+                            <option value="php">php</option>
                             <option value="proxy_ajp">proxy_ajp</option>
                             <option value="proxy_balancer">proxy_balancer</option>
                             <option value="proxy">proxy</option>
@@ -227,7 +227,7 @@
                                     <div class="field">
                                         <label for="webserver_name_0">Server Name:</label>
                                         <div class="ui left labeled input">
-                                            <input type="text" id="webserver_name_0" name="webserver[vhost][0][name]" />
+                                            <input type="text" id="webserver_name_0" name="webserver[vhost][0][name]" placeholder="website.dev" />
                                             <div class="ui corner label">
                                                 <i class="icon asterisk"></i>
                                             </div>
@@ -236,7 +236,7 @@
                                     <div class="field">
                                         <label for="webserver_docroot_0">Document Root:</label>
                                         <div class="ui left labeled input">
-                                            <input type="text" id="webserver_docroot_0" name="webserver[vhost][0][doc_root]" />
+                                            <input type="text" id="webserver_docroot_0" name="webserver[vhost][0][doc_root]" placeholder="/var/www" />
                                             <div class="ui corner label">
                                                 <i class="icon asterisk"></i>
                                             </div>
@@ -246,12 +246,12 @@
                                 <div class="two fields">
                                     <div class="field">
                                         <label for="webserver_aliases_0">Server Aliases:</label>
-                                        <input type="text" id="webserver_aliases_0" name="webserver[vhost][0][aliases]" />
+                                        <input type="text" id="webserver_aliases_0" name="webserver[vhost][0][aliases]" placeholder="www.website.dev" />
                                     </div>
                                     <div class="field">
                                         <label for="webserver_port_0">Server Port:</label>
                                         <div class="ui left labeled input">
-                                            <input type="text" id="webserver_port_0" name="webserver[vhost][0][port]" />
+                                            <input type="text" id="webserver_port_0" name="webserver[vhost][0][port]" placeholder="80" />
                                             <div class="ui corner label">
                                                 <i class="icon asterisk"></i>
                                             </div>
@@ -391,7 +391,7 @@
                                 <option value="America/Caracas">America/Caracas</option>
                                 <option value="America/Cayenne">America/Cayenne</option>
                                 <option value="America/Cayman">America/Cayman</option>
-                                <option value="America/Chicago"selected>America/Chicago</option>
+                                <option value="America/Chicago">America/Chicago</option>
                                 <option value="America/Chihuahua">America/Chihuahua</option>
                                 <option value="America/Costa_Rica">America/Costa_Rica</option>
                                 <option value="America/Creston">America/Creston</option>
@@ -1413,7 +1413,7 @@
                         <div class="field">
                             <label for="mysql_password">Root Password:</label>
                             <div class="ui left labeled input">
-                                <input type="text" id="mysql_password" name="mysql[password]" />
+                                <input type="text" id="mysql_password" name="mysql[password]" placeholder="root" />
                                 <div class="ui corner label">
                                     <i class="icon asterisk"></i>
                                 </div>
@@ -1423,6 +1423,70 @@
                             <label for="phpmyadmin">PHPMyAdmin:</label>
                             <input type="hidden" id="phpmyadmin" name="mysql[phpmyadmin]" value="0" />
                             <div class="ui fluid toggle black button phpmyadmin">Disabled</div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui segment">
+                            <div class="ui top attached black label">Database &amp; User</div>
+                            <div class="ui segment mysql-database" data-id="0">
+                                <a class="ui right red corner label">
+                                    <i class="remove icon"></i>
+                                </a>
+                                <div class="two fields">
+                                    <div class="field">
+                                        <label for="mysql_db_name_0">Database Name:</label>
+                                        <input type="text" id="mysql_db_name_0" name="mysql[db][0][name]" placeholder="database name" />
+                                    </div>
+                                    <div class="field">
+                                        <label for="mysql_db_host_0">Database Host:</label>
+                                        <input type="text" id="mysql_db_host_0" name="mysql[db][0][host]" placeholder="localhost" />
+                                    </div>
+                                </div>
+                                <div class="two fields">
+                                    <div class="field">
+                                        <label for="mysql_db_username_0">Username:</label>
+                                        <input type="text" id="mysql_db_username_0" name="mysql[db][0][username]" placeholder="username" />
+                                    </div>
+                                    <div class="field">
+                                        <label for="mysql_db_password_0">Password:</label>
+                                        <input type="text" id="mysql_db_password_0" name="mysql[db][0][password]" placeholder="password" />
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label for="mysql_db_privileges_0">Privileges:</label>
+                                    <select id="mysql_db_privileges_0" name="mysql[db][0][privileges][]" class="selectized" multiple>
+                                        <option value="ALL" selected>ALL</option>
+                                        <option value="ALTER">ALTER</option>
+                                        <option value="CREATE">CREATE</option>
+                                        <option value="CREATE TEMPORARY TABLES">CREATE TEMPORARY TABLES</option>
+                                        <option value="DELETE">DELETE</option>
+                                        <option value="DROP">DROP</option>
+                                        <option value="EXECUTE">EXECUTE</option>
+                                        <option value="FILE">FILE</option>
+                                        <option value="INDEX">INDEX</option>
+                                        <option value="INSERT">INSERT</option>
+                                        <option value="LOCAL TABLES">LOCAL TABLES</option>
+                                        <option value="PROCESS">PROCESS</option>
+                                        <option value="REFERENCES">REFERENCES</option>
+                                        <option value="RELOAD">RELOAD</option>
+                                        <option value="REPLICATION CLIENT">REPLICATION CLIENT</option>
+                                        <option value="REPLICATION SLAVE">REPLICATION SLAVE</option>
+                                        <option value="SELECT">SELECT</option>
+                                        <option value="SHOW DATABASES">SHOW DATABASES</option>
+                                        <option value="SHUTDOWN">SHUTDOWN</option>
+                                        <option value="SUPER">SUPER</option>
+                                        <option value="UPDATE">UPDATE</option>
+                                        <option value="USAGE">USAGE</option>
+                                        <option value="GRANT OPTION">GRANT OPTION</option>
+                                    </select>
+                                    <!-- <input type="text" id="mysql_db_privileges_0" class="selectized" name="mysql[db][0][privileges]" /> -->
+                                </div>
+                            </div>
+                            <div class="field">
+                                <a class="ui fluid labeled green icon button mysql-database">
+                                    <i class="add icon"></i> Add database
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

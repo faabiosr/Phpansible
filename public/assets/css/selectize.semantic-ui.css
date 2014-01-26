@@ -132,7 +132,7 @@
   z-index: 1;
   display: inline-block;
   width: 100%;
-  padding: 0.801em 1.2em;
+  padding: 0.802em 1.2em;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.15);
   color: rgba(0, 0, 0, 0.7);
@@ -147,6 +147,10 @@
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.selectize-control.single .selectize-input {
+  padding: 0.68em 1.2em;
 }
 
 .selectize-control.multi .selectize-input.has-items {
@@ -216,6 +220,10 @@
   -webkit-user-select: auto !important;
 }
 
+.selectize-control.single .selectize-input > input {
+  margin: -1px 1px !important;
+}
+
 .selectize-input > input:focus {
   outline: none !important;
 }
@@ -254,6 +262,11 @@
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+.selectize-dropdown.single {
+  margin: -2px 0 0 0;
+}
+
 
 .selectize-dropdown [data-selectable] {
   overflow: hidden;
@@ -326,7 +339,7 @@
 }
 
 .selectize-control.single .selectize-input.dropdown-active:after {
-  margin-top: -4px;
+  margin-top: -1px;
   border-color: transparent transparent #808080 transparent;
   border-width: 0 5px 5px 5px;
 }
@@ -366,21 +379,13 @@
 }
 
 .selectize-control.single .selectize-input {
-  background-color: #f9f9f9;
-  background-image: -moz-linear-gradient(top, #fefefe, #f2f2f2);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#f2f2f2));
-  background-image: -webkit-linear-gradient(top, #fefefe, #f2f2f2);
-  background-image: -o-linear-gradient(top, #fefefe, #f2f2f2);
-  background-image: linear-gradient(to bottom, #fefefe, #f2f2f2);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffefefe', endColorstr='#fff2f2f2', GradientType=0);
-  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
-          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
-}
-
-.selectize-control.single .selectize-input,
-.selectize-dropdown.single {
-  border-color: #b8b8b8;
+    -webkit-transition: none;
+  transition: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
 }
 
 .selectize-dropdown .optgroup-header {

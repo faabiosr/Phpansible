@@ -11,8 +11,6 @@ Main.prototype.form = function() {
         buttons   = $('.ui.buttons .button')
         addButton = $('i.add').closest('a.button');
 
-    console.log(addButton);
-
     checkbox.checkbox();
     dropdown.dropdown();
 
@@ -57,6 +55,35 @@ Main.prototype.form = function() {
 
     addButton.on('click', this.addSegment);
     this.removePort();
+
+    $('input.selectized').selectize({
+        plugins: ['remove_button'],
+        delimiter: ',',
+        persist: false,
+        createOnBlur: true,
+        create: function(input) {
+            return {
+                value: input,
+                text: input
+            }
+        }
+    });
+
+    $('select.selectized').selectize({
+        plugins: ['remove_button'],
+        delimiter: ',',
+        persist: false,
+        create: function(input) {
+            return {
+                value: input,
+                text: input
+            }
+        },
+        maxItems: null,
+        valueField: 'value',
+        labelField: 'text',
+        searchField: 'value'
+    });
 }
 
 Main.prototype.waypoints = function() {

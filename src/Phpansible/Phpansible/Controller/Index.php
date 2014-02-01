@@ -12,4 +12,9 @@ class Index implements Routable
             '_view' => 'index/index.html'
         );
     }
+
+    public function post()
+    {
+        var_dump($_POST);
+    }
 }

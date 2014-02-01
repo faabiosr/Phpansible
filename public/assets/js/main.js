@@ -130,6 +130,37 @@ Main.prototype.waypoints = function() {
         offset: 85,
         stuckClass: 'stuck'
     });
+
+    peekItem.on('click', function(){
+
+        var body     = $('html, body'),
+            header   = $(this),
+            menu     = header.parent(),
+            group    = menu.children(),
+            headers  = group.add(group.find('.menu .item')),
+            waypoint = waypoints.eq(group.index(header)),
+            offset   = waypoint.offset().top - 70;
+
+        if (!header.hasClass('active')) {
+            menu.addClass('animating');
+            headers.removeClass('active');
+            body.stop()
+                .one('scroll', function() {
+                    body.stop();
+                })
+                .animate({
+                    scrollTop: offset
+                }, 500)
+                .promise()
+                .done(function() {
+                    menu.removeClass('animating');
+                    headers.removeClass('active');
+                    header.addClass('active');
+                    waypoint.css('color', header.css('border-right-color'));
+                    waypoints.removeAttr('style');
+                });
+        }
+    });
 }
 
 Main.prototype.addSegment = function(element) {

@@ -5,9 +5,15 @@
 - name: Nginx - Create host folder
   file: path={{ document_root  }} state=directory
 
+- name: Nginx - Check configuration is applied
+  action: shell test -e {{ nginx_folder  }}/sites-available/{{ server_name }} && echo "yes" || echo "no"
+  register: is_config_exists
+
 - name: Nginx - Configure Host
   template: src=files/nginx.conf dest={{ nginx_folder }}/sites-available/{{ server_name }}
+  when: is_config_exists.stdout == "no"
 
 - name: Nginx - Applying configuration
   command: ln -s {{ nginx_folder }}/sites-available/{{ server_name }} {{ nginx_folder }}/sites-enabled/{{ server_name }}
+  when: is_config_exists.stdout == "no"
   notify: Nginx - Restart

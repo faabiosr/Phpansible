@@ -7,6 +7,8 @@
     - php5-fpm
     - php5-xdebug
     - php5-curl
+    - php5-dev
+    - php-pear
 - name: PHP - Disable default configuration
   command: mv /etc/php5/fpm/pool.d/www.conf /etc/php5/fpm/pool.d/www.disabled creates=/etc/php5/fpm/pool.d/www.disabled
 - name: PHP - Configure FPM
@@ -16,3 +18,23 @@
   shell: 
     curl -sS https://getcomposer.org/installer | /usr/bin/php && /bin/mv -f /home/vagrant/composer.phar /usr/local/bin/composer 
     creates=/usr/local/bin/composer
+
+- name: PHP - Install LibYaml
+  apt: pkg=libyaml-dev state=installed
+
+- name: PHP - Check Yaml extension is installed
+  action: shell php -m | grep -q "yaml" && echo "yes" || echo "no"
+  register: is_yaml_installed
+
+- name: PHP - Install Pecl Yaml
+  action: shell printf "\n" | pecl install yaml
+  when: is_yaml_installed.stdout == "no"
+
+- name: PHP - Create Yaml extension
+  copy: src=files/yaml.ini dest=/etc/php5/mods-available/ owner=root mode=0644
+  when: is_yaml_installed.stdout == "no"
+
+- name: PHP - Enable Yaml extension
+  action: shell php5enmod yaml
+  when: is_yaml_installed.stdout == "no"
+  notify: Nginx - Restart
